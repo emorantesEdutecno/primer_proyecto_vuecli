@@ -20,8 +20,9 @@ export default {
   data:function(){
     return{
 
-      imagenSyd: './assets/img/Syd.webp',
-      imagenBud: './assets/img/Bud.jpg',
+      // la ruta de las imagenes es desde la carpeta src,
+      imagenSyd: 'assets/img/Syd.webp',
+      imagenBud: 'assets/img/Bud.jpg',
       imagenAMostrar:'',
       textoMostrar: 'no hay imagen seleccionada'
     }
