@@ -5,7 +5,6 @@
       <router-link to="/about">Información</router-link>
     </nav>
     <router-view/>
-
     <hr>
       <div class="prueba">
           <p>Contenido:</p>
