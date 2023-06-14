@@ -1,14 +1,54 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Inicio</router-link> |
+      <router-link to="/about">Información</router-link>
     </nav>
     <router-view/>
+
+    <hr>
+      <div class="prueba">
+          <p>Contenido:</p>
+          <p id="parrafoMensaje">{{ mensaje }}</p>
+          <p>{{ saludo  }}</p>
+          <button v-on:click="saludar">Ver saludo</button>
+      </div>
+    <hr>
   </div>
 </template>
 
+<script>
+  export default{
+    name: 'app-component',
+    data: function(){
+      return{
+        mensaje: 'Hola Mundo con VueJS',
+        otroMensaje: 'Estamos trabajando con VueJS2',
+        saludo: ''
+      }
+    },
+    methods: {
+      saludar: function(){
+        this.saludo =  'Estoy cambiando una propiedad del modelo de datos';
+      }
+    }
+  }
+</script>
+
 <style>
+body {
+  background-color:lightpink;
+}
+
+.prueba{
+  background-color: darkgreen;
+  color: yellow;
+}
+
+#parrafoMensaje{
+  font-size: 30px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,6 +67,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: red;
 }
 </style>
