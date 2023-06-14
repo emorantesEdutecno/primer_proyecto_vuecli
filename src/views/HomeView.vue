@@ -20,9 +20,12 @@ export default {
   data:function(){
     return{
 
-      // la ruta de las imagenes es desde la carpeta src,
-      imagenSyd: 'assets/img/Syd.webp',
-      imagenBud: 'assets/img/Bud.jpg',
+      // la ruta de las imagenes es desde la carpeta src que se identifica por @
+      // para cargar imagenes desde una propiedad del modelo de datos, es necesario usar require()
+      // require() funciona en cualquier parte del programa a diferencia de import()
+      // require() sirve para incluir módulo dentro de los archivos
+      imagenSyd: require('@/assets/img/Syd.webp'),
+      imagenBud: require('@/assets/img/Bud.jpg'),
       imagenAMostrar:'',
       textoMostrar: 'no hay imagen seleccionada'
     }
